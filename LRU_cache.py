@@ -13,7 +13,9 @@ class LRU:
 
                 self.lrucache.append(item)        
         else:
-            m1 = self.lrucache.remove(item)
+            # m1 = self.lrucache.remove(item)
+            index = self.lrucache.index(item)
+            m1 = self.lrucache.pop(index)
             self.lrucache.append(m1)
 
     def get(self):
