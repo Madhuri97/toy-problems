@@ -5,15 +5,24 @@ class LRU:
         self.size = 6
     
     def put(self,item):
-        pass
-    
-    def get(self):
-        pass
-    
-    def get_cache(self):
-        pass
+        if item not in self.lrucache:
+            if(self.lrucache.__len__() < self.size):
+                self.lrucache.append(item)
+            else:
+                self.lrucache.pop(0)
 
-        
+                self.lrucache.append(item)        
+        else:
+            m1 = self.lrucache.remove(item)
+            self.lrucache.append(m1)
+
+    def get(self):
+        return self.lrucache[0]
+
+    def get_cache(self):
+        return self.lrucache
+
+
 class LRUTest:
     def __init__(self):
         pass
