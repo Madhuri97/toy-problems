@@ -48,7 +48,4 @@ class LRUTest:
         assert l.get_cache() == [35, 507, 45, 501, 38], "testcase3 failed"
         print("Testcase 3 Passed")
         print("All Testcases Passed")
-          
-li = LRUTest()
-li.testingmethod()
     
