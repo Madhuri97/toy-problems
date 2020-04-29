@@ -10,6 +10,14 @@ const obj2 = {
 
 // const obj2 = Object.assign({}.obj1)
 
+//created a function to check the object type
+function isObject(obj) {
+    if(typeof obj === "object" && obj != null) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 //created a function with two parameters for checking the values
 function deepEqual(val1, val2) {
